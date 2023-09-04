@@ -1,0 +1,17 @@
+use("platzi_store")
+// operator $inc uncrements the calue if the field by the specified amount
+
+
+db.products.updateOne(
+    // querry
+    {_id:2},
+    // change => operator
+    {
+        $inc:{
+            price:100
+        }
+        
+    }
+    )
+
+db.products.find()
